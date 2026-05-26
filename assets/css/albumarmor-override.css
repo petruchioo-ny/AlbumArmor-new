@@ -1,0 +1,192 @@
+/*
+	AlbumArmor® brand overrides for Massively template
+	Palette: ink #2b1d12 | accent #b9461f | cream #faf3e6
+*/
+
+/* ── Typography: Raleway site-wide ──────────────────────────────────── */
+
+body,
+input, select, textarea,
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Raleway', sans-serif !important;
+}
+
+/* Massively uses Source Sans Pro 900 for headings — replace with Raleway bold */
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+	letter-spacing: 0.04em;
+}
+
+/* Intro tagline lighter weight to match logo */
+#intro p { font-weight: 300; letter-spacing: 0.05em; }
+
+/* Nav links */
+#nav .links a,
+#header .logo { font-family: 'Raleway', sans-serif !important; }
+
+/* ── Intro layout: logo top, tagline middle, button near bottom ──────── */
+
+#intro {
+	justify-content: space-between;
+	padding-top: 18vh;
+	padding-bottom: 14vh;
+}
+
+/* ── Intro logo (text, matches Logo.jpeg exactly) ────────────────────── */
+
+.intro-logo-wrap {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 auto 1.5em;
+}
+.intro-logo-name {
+	display: block;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
+	font-size: 4.68em;
+	color: #ffffff;
+	letter-spacing: 0.01em;
+	line-height: 1.1;
+}
+.intro-logo-sub {
+	display: block;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
+	font-size: 1.365em;
+	color: rgba(255, 255, 255, 0.85);
+	letter-spacing: 0.02em;
+	margin-top: 0.3em;
+}
+
+/* ── Accent color: cyan #18bfef → rust #b9461f ──────────────────────── */
+
+a { color: #b9461f; }
+a:hover { color: #d4521f; }
+
+/* Buttons */
+.button:hover {
+	box-shadow: inset 0 0 0 2px #b9461f;
+	color: #b9461f !important;
+}
+.button.primary {
+	background-color: #2b1d12;
+	box-shadow: none;
+	color: #faf3e6 !important;
+}
+.button.primary:hover {
+	background-color: #b9461f !important;
+	box-shadow: none;
+	color: #faf3e6 !important;
+}
+
+/* ── Dark backgrounds: cold navy → warm ink ─────────────────────────── */
+
+body { background-color: #1a1210; }
+
+#wrapper > .bg {
+	background-color: #1a1210;
+	background-image: url("../../images/overlay.png"),
+	                  linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+	                  url("../../images/bg.jpg");
+	background-size: auto, auto, cover;
+	background-position: center, center, center;
+}
+
+#wrapper.fade-in:before { background: #1a1210; }
+
+/* ── Header ─────────────────────────────────────────────────────────── */
+
+#header {
+	background-color: rgba(43, 29, 18, 0.925);
+	border-bottom-color: rgba(185, 70, 31, 0.25);
+}
+
+#header a { color: #faf3e6; }
+#header a:hover { color: #b9461f !important; }
+
+#header .logo {
+	border-color: rgba(250, 243, 230, 0.45);
+	color: #faf3e6;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+}
+#header .logo:hover {
+	border-color: #b9461f;
+	color: #b9461f;
+}
+
+/* ── Nav ─────────────────────────────────────────────────────────────── */
+
+#nav {
+	background-color: #2b1d12;
+	border-bottom-color: rgba(185, 70, 31, 0.2);
+}
+
+#nav .links a { color: rgba(250, 243, 230, 0.65); }
+#nav .links a:hover,
+#nav .links li.active a {
+	color: #b9461f;
+	border-bottom-color: #b9461f;
+}
+
+#nav .icons a { color: rgba(250, 243, 230, 0.65); }
+#nav .icons a:hover { color: #b9461f; }
+
+/* ── Intro ───────────────────────────────────────────────────────────── */
+
+#intro .button:hover {
+	box-shadow: inset 0 0 0 2px #b9461f;
+	color: #b9461f !important;
+}
+#intro a:hover { color: #b9461f !important; }
+
+/* ── Date badge (repurposed as category label) ───────────────────────── */
+
+.date { color: #b9461f; }
+header.major > .date:before,
+header.major > .date:after { background-color: #b9461f; }
+
+/* ── Post card links ─────────────────────────────────────────────────── */
+
+article header h2 a:hover { color: #b9461f; }
+article .post.featured header.major h2 a:hover { color: #b9461f; }
+
+/* ── Pagination ──────────────────────────────────────────────────────── */
+
+.pagination .page.active {
+	background-color: #2b1d12;
+	border-color: #2b1d12;
+}
+.pagination a:hover { color: #b9461f; border-color: #b9461f; }
+.pagination .next:hover,
+.pagination .previous:hover { color: #b9461f; }
+
+/* ── Footer ──────────────────────────────────────────────────────────── */
+
+#footer { background-color: #241710; }
+#footer h2, #footer h3 { color: #faf3e6; }
+
+/* Form focus states */
+#footer input[type="text"]:focus,
+#footer input[type="email"]:focus,
+#footer textarea:focus { border-color: #b9461f; }
+
+#footer input[type="submit"],
+#footer button,
+#footer .button {
+	background-color: #b9461f;
+	color: #faf3e6 !important;
+	box-shadow: none;
+}
+#footer input[type="submit"]:hover,
+#footer button:hover,
+#footer .button:hover {
+	background-color: #8a3015 !important;
+	box-shadow: none;
+}
+
+/* ── Copyright bar ───────────────────────────────────────────────────── */
+
+#copyright { border-top-color: rgba(185, 70, 31, 0.2); }
+#copyright a:hover { color: #b9461f; }
