@@ -24,12 +24,19 @@ h1, h2, h3, h4, h5, h6 {
 #nav .links a,
 #header .logo { font-family: 'Raleway', sans-serif !important; }
 
-/* ── Intro layout: logo top, tagline middle, button near bottom ──────── */
+/* ── Intro: AlbumArmor vertically centered, arrow pinned to bottom ───── */
 
 #intro {
-	justify-content: space-between;
-	padding-top: 18vh;
-	padding-bottom: 14vh;
+	justify-content: center;
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+}
+
+#intro .actions {
+	position: absolute;
+	bottom: 3rem;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 /* ── Intro logo (text, matches Logo.jpeg exactly) ────────────────────── */
@@ -49,14 +56,18 @@ h1, h2, h3, h4, h5, h6 {
 	letter-spacing: 0.01em;
 	line-height: 1.1;
 }
-.intro-logo-sub {
+.intro-logo-tagline {
 	display: block;
+	width: 100%;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 300;
-	font-size: 1.365em;
-	color: rgba(255, 255, 255, 0.85);
-	letter-spacing: 0.02em;
-	margin-top: 0.3em;
+	font-style: normal;
+	font-size: 1.1em;
+	color: rgba(255, 255, 255, 0.8);
+	text-align: justify;
+	text-align-last: justify;
+	margin-top: 0.5em;
+	letter-spacing: normal;
 }
 
 /* ── Accent color: cyan #18bfef → rust #b9461f ──────────────────────── */
@@ -106,10 +117,11 @@ body { background-color: #1a1210; }
 #header a:hover { color: #b9461f !important; }
 
 #header .logo {
-	border-color: rgba(250, 243, 230, 0.45);
+	border: none;
 	color: #faf3e6;
-	font-weight: 700;
-	letter-spacing: 0.1em;
+	font-weight: 300;
+	font-style: italic;
+	letter-spacing: 0.08em;
 }
 #header .logo:hover {
 	border-color: #b9461f;
