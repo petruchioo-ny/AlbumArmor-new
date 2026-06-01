@@ -1,6 +1,7 @@
 /*
 	AlbumArmor® brand overrides for Massively template
-	Palette: ink #2b1d12 | accent #b9461f | cream #faf3e6
+	Light theme — warm off-white, like anthropic.com
+	Palette: cream #faf8f4 | ink #2b1d12 | accent #b9461f
 */
 
 /* ── Typography: Raleway site-wide ──────────────────────────────────── */
@@ -11,25 +12,37 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'Raleway', sans-serif !important;
 }
 
-/* Massively uses Source Sans Pro 900 for headings — replace with Raleway bold */
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 700;
 	letter-spacing: 0.04em;
 }
 
-/* Intro tagline lighter weight to match logo */
 #intro p { font-weight: 300; letter-spacing: 0.05em; }
-
-/* Nav links */
 #nav .links a,
 #header .logo { font-family: 'Raleway', sans-serif !important; }
 
-/* ── Intro: AlbumArmor vertically centered, arrow pinned to bottom ───── */
+/* ── Light background ────────────────────────────────────────────────── */
+
+body { background-color: #faf8f4; }
+
+#wrapper > .bg {
+	background-color: #faf8f4;
+	background-image: url("../../images/overlay.png"),
+	                  linear-gradient(0deg, rgba(250,248,244,0.88), rgba(250,248,244,0.88)),
+	                  url("../../images/bg.jpg");
+	background-size: auto, auto, cover;
+	background-position: center, center, center;
+}
+
+#wrapper.fade-in:before { background: #faf8f4; }
+
+/* ── Intro: vertically centered ──────────────────────────────────────── */
 
 #intro {
 	justify-content: center;
 	padding-top: 4rem;
 	padding-bottom: 4rem;
+	color: #2b1d12;
 }
 
 #intro .actions {
@@ -39,23 +52,26 @@ h1, h2, h3, h4, h5, h6 {
 	transform: translateX(-50%);
 }
 
-/* ── Intro logo (text, matches Logo.jpeg exactly) ────────────────────── */
+/* ── Intro logo ──────────────────────────────────────────────────────── */
 
 .intro-logo-wrap {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	margin: 0 auto 1.5em;
+	transform: translateY(-8rem);
 }
+
 .intro-logo-name {
 	display: block;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 300;
 	font-size: 4.68em;
-	color: #ffffff;
+	color: #2b1d12;
 	letter-spacing: 0.01em;
 	line-height: 1.1;
 }
+
 .intro-logo-tagline {
 	display: block;
 	width: 100%;
@@ -63,19 +79,18 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 300;
 	font-style: normal;
 	font-size: 1.1em;
-	color: rgba(255, 255, 255, 0.8);
+	color: rgba(43, 29, 18, 0.65);
 	text-align: justify;
 	text-align-last: justify;
 	margin-top: 0.5em;
 	letter-spacing: normal;
 }
 
-/* ── Accent color: cyan #18bfef → rust #b9461f ──────────────────────── */
+/* ── Accent color: cyan → rust #b9461f ───────────────────────────────── */
 
 a { color: #b9461f; }
 a:hover { color: #d4521f; }
 
-/* Buttons */
 .button:hover {
 	box-shadow: inset 0 0 0 2px #b9461f;
 	color: #b9461f !important;
@@ -83,86 +98,115 @@ a:hover { color: #d4521f; }
 .button.primary {
 	background-color: #2b1d12;
 	box-shadow: none;
-	color: #faf3e6 !important;
+	color: #faf8f4 !important;
 }
 .button.primary:hover {
 	background-color: #b9461f !important;
 	box-shadow: none;
-	color: #faf3e6 !important;
+	color: #faf8f4 !important;
 }
 
-/* ── Dark backgrounds: cold navy → warm ink ─────────────────────────── */
-
-body { background-color: #1a1210; }
-
-#wrapper > .bg {
-	background-color: #1a1210;
-	background-image: url("../../images/overlay.png"),
-	                  linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
-	                  url("../../images/bg.jpg");
-	background-size: auto, auto, cover;
-	background-position: center, center, center;
+/* Buttons in light context */
+.button {
+	box-shadow: inset 0 0 0 2px #2b1d12;
+	color: #2b1d12 !important;
 }
 
-#wrapper.fade-in:before { background: #1a1210; }
-
-/* ── Header ─────────────────────────────────────────────────────────── */
+/* ── Header ──────────────────────────────────────────────────────────── */
 
 #header {
-	background-color: rgba(43, 29, 18, 0.925);
-	border-bottom-color: rgba(185, 70, 31, 0.25);
+	background-color: rgba(250, 248, 244, 0.95);
+	border-bottom-color: rgba(43, 29, 18, 0.12);
 }
 
-#header a { color: #faf3e6; }
+#header a { color: #2b1d12; }
 #header a:hover { color: #b9461f !important; }
 
 #header .logo {
 	border: none;
-	color: #faf3e6;
+	color: #2b1d12;
 	font-weight: 300;
-	font-style: italic;
+	font-style: normal;
+	font-size: 1.575rem;
 	letter-spacing: 0.08em;
+	text-transform: none;
 }
-#header .logo:hover {
-	border-color: #b9461f;
-	color: #b9461f;
-}
+#header .logo:hover { color: #b9461f; }
 
 /* ── Nav ─────────────────────────────────────────────────────────────── */
 
 #nav {
-	background-color: #2b1d12;
-	border-bottom-color: rgba(185, 70, 31, 0.2);
+	background-color: #faf8f4;
+	border-bottom-color: rgba(43, 29, 18, 0.1);
 }
 
-#nav .links a { color: rgba(250, 243, 230, 0.65); }
+#nav .links a { color: rgba(43, 29, 18, 0.6); }
 #nav .links a:hover,
 #nav .links li.active a {
 	color: #b9461f;
 	border-bottom-color: #b9461f;
 }
 
-#nav .icons a { color: rgba(250, 243, 230, 0.65); }
+#nav .icons a { color: rgba(43, 29, 18, 0.5); }
 #nav .icons a:hover { color: #b9461f; }
 
-/* ── Intro ───────────────────────────────────────────────────────────── */
+/* ── Intro links ─────────────────────────────────────────────────────── */
 
+#intro .button {
+	box-shadow: inset 0 0 0 2px #2b1d12;
+	color: #2b1d12 !important;
+}
 #intro .button:hover {
 	box-shadow: inset 0 0 0 2px #b9461f;
 	color: #b9461f !important;
 }
 #intro a:hover { color: #b9461f !important; }
 
-/* ── Date badge (repurposed as category label) ───────────────────────── */
+/* ── Coming Soon placeholder ─────────────────────────────────────────── */
+
+.coming-soon-box {
+	background: #ede8df;
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+	min-height: 220px;
+	border-radius: 4px;
+	margin-bottom: 2em;
+}
+.coming-soon-box span {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	font-size: 0.85rem;
+	letter-spacing: 0.25em;
+	text-transform: uppercase;
+	color: #9a8a78;
+}
+
+/* ── Featured post tagline ───────────────────────────────────────────── */
+
+article.post.featured header.major > p {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 1.85rem;
+	letter-spacing: 0.06em;
+}
+
+/* ── Date badge ──────────────────────────────────────────────────────── */
 
 .date { color: #b9461f; }
 header.major > .date:before,
 header.major > .date:after { background-color: #b9461f; }
 
-/* ── Post card links ─────────────────────────────────────────────────── */
+/* ── Post card headings — match header logo style ────────────────────── */
 
+.posts article header h2,
+.posts article header h2 a {
+	font-weight: 400;
+	font-style: normal;
+	text-transform: none;
+	letter-spacing: 0.08em;
+}
 article header h2 a:hover { color: #b9461f; }
-article .post.featured header.major h2 a:hover { color: #b9461f; }
 
 /* ── Pagination ──────────────────────────────────────────────────────── */
 
@@ -171,15 +215,12 @@ article .post.featured header.major h2 a:hover { color: #b9461f; }
 	border-color: #2b1d12;
 }
 .pagination a:hover { color: #b9461f; border-color: #b9461f; }
-.pagination .next:hover,
-.pagination .previous:hover { color: #b9461f; }
 
 /* ── Footer ──────────────────────────────────────────────────────────── */
 
-#footer { background-color: #241710; }
-#footer h2, #footer h3 { color: #faf3e6; }
+#footer { background-color: #f0ece4; }
+#footer h2, #footer h3 { color: #2b1d12; }
 
-/* Form focus states */
 #footer input[type="text"]:focus,
 #footer input[type="email"]:focus,
 #footer textarea:focus { border-color: #b9461f; }
@@ -188,7 +229,7 @@ article .post.featured header.major h2 a:hover { color: #b9461f; }
 #footer button,
 #footer .button {
 	background-color: #b9461f;
-	color: #faf3e6 !important;
+	color: #faf8f4 !important;
 	box-shadow: none;
 }
 #footer input[type="submit"]:hover,
@@ -198,7 +239,8 @@ article .post.featured header.major h2 a:hover { color: #b9461f; }
 	box-shadow: none;
 }
 
-/* ── Copyright bar ───────────────────────────────────────────────────── */
+/* ── Copyright ───────────────────────────────────────────────────────── */
 
-#copyright { border-top-color: rgba(185, 70, 31, 0.2); }
+#copyright { border-top-color: rgba(43, 29, 18, 0.15); }
+#copyright, #copyright a { color: rgba(43, 29, 18, 0.5); }
 #copyright a:hover { color: #b9461f; }
