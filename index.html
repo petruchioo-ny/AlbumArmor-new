@@ -65,11 +65,10 @@
 								<article>
 									<header>
 										<span class="date">Adjustable</span>
-										<h2><a href="#">Fits 1 to 8<br />
-										LPs perfectly</a></h2>
+										<h2><a href="#">Fits 1–8 LPs Perfectly</a></h2>
 									</header>
 									<a href="#" class="image fit"><img src="images/image2_cropped.jpg" alt="" /></a>
-									<p>Pre-scored fold lines eliminate internal rattle and protect corners — whether you're shipping one record or a full sleeve of eight.</p>
+									<p>Whether you're shipping a single record or a stack of eight, AlbumArmor adjusts to create a secure, snug fit that minimizes movement and helps protect jackets, corners, and edges during transit.</p>
 									<ul class="actions special">
 										<li><a href="#" class="button">Learn More</a></li>
 									</ul>
@@ -89,35 +88,10 @@
 								<article>
 									<header>
 										<span class="date">Protection</span>
-										<h2><a href="#">Corner & Edge<br />
-										Reinforcement</a></h2>
+										<h2><a href="#">Built to Protect Every Corner</a></h2>
 									</header>
-									<a href="#" class="image fit"><img src="images/0a582aa4-87bc-412b-a748-48877d24146b.jpg" alt="" /></a>
-									<p>Reinforced geometry exactly where most boxes fail — so sleeves arrive flat, not folded or creased.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Learn More</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">Assembly</span>
-										<h2><a href="#">Pack Vinyl Records<br />
-										in Seconds</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/a90f1bfb-5c37-4c2e-9b28-b10756d4d5d5.jpg" alt="" /></a>
-									<p>No tape. No frustration. Just fold, lock, and protect your records with AlbumArmor's secure self-locking design.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Learn More</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">For Sellers</span>
-										<h2><a href="#">Built for Discogs<br />
-										eBay & Shopify</a></h2>
-									</header>
-									<div class="image fit coming-soon-box"><span>Coming Soon</span></div>
-									<p>Stacks flat, packs fast, ships efficiently. Trusted by independent sellers and record stores every day.</p>
+									<a href="#" class="image fit"><img src="images/IMG_3218_cropped.jpg" alt="" /></a>
+									<p>Reinforced corners and edges help absorb shipping impacts and reduce the risk of bent sleeves, crushed corners, and damaged jackets—keeping your records safe from warehouse to doorstep.</p>
 									<ul class="actions special">
 										<li><a href="#" class="button">Learn More</a></li>
 									</ul>
@@ -125,11 +99,21 @@
 								<article>
 									<header>
 										<span class="date">Included</span>
-										<h2><a href="#">10 FRAGILE<br />
-										Stickers Per Pack</a></h2>
+										<h2><a href="#">Everything You Need to Ship</a></h2>
 									</header>
-									<div class="image fit coming-soon-box"><span>Coming Soon</span></div>
-									<p>Bright FRAGILE stickers ship with every pack so handlers know exactly what's inside from the moment it leaves your hands.</p>
+									<a href="#" class="image fit"><img src="images/D4B731DA-9180-4F51-97FF-9148D0B905B1.jpeg" alt="" /></a>
+									<p>Every pack includes high-visibility FRAGILE stickers to help identify vinyl shipments and encourage careful handling from warehouse to doorstep.</p>
+									<ul class="actions special">
+										<li><a href="#" class="button">Learn More</a></li>
+									</ul>
+								</article>
+								<article class="full-width">
+									<header>
+										<span class="date">Assembly</span>
+										<h2><a href="#" class="title-sm">Pack Vinyl Records in Seconds</a></h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/a90f1bfb-5c37-4c2e-9b28-b10756d4d5d5.jpg" alt="" /></a>
+									<p>No tape. No frustration. Just fold, lock, and protect your records with AlbumArmor's secure self-locking design.</p>
 									<ul class="actions special">
 										<li><a href="#" class="button">Learn More</a></li>
 									</ul>
@@ -199,6 +183,21 @@
 					</div>
 
 			</div>
+
+		<!-- Learn More toggle -->
+			<script>
+				document.addEventListener('DOMContentLoaded', function() {
+					document.querySelectorAll('.posts article .button').forEach(function(btn) {
+						btn.addEventListener('click', function(e) {
+							e.preventDefault();
+							var p = this.closest('article').querySelector('p');
+							if (!p) return;
+							p.classList.toggle('expanded');
+							this.textContent = p.classList.contains('expanded') ? 'Show Less' : 'Learn More';
+						});
+					});
+				});
+			</script>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>

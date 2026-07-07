@@ -197,14 +197,55 @@ article.post.featured header.major > p {
 header.major > .date:before,
 header.major > .date:after { background-color: #b9461f; }
 
+/* ── Full-width post card ────────────────────────────────────────────── */
+
+#main > .posts > article.full-width {
+	flex: 0 0 100%;
+	max-width: 100%;
+	border-right: none !important;
+}
+
+#main > .posts > article.full-width .image.fit {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* ── Post card description truncation ───────────────────────────────── */
+
+.posts article p {
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+.posts article p.expanded {
+	display: block;
+	-webkit-line-clamp: unset;
+	overflow: visible;
+}
+
 /* ── Post card headings — match header logo style ────────────────────── */
+
+.posts article header {
+	min-height: 5.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
 
 .posts article header h2,
 .posts article header h2 a {
 	font-weight: 400;
 	font-style: normal;
+	font-size: 1.3rem;
 	text-transform: none;
-	letter-spacing: 0.08em;
+	letter-spacing: 0.06em;
+}
+
+.posts article header h2 a.title-sm {
+	font-size: 1.3rem;
+	white-space: nowrap;
 }
 article header h2 a:hover { color: #b9461f; }
 
